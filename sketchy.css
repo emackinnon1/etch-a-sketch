@@ -1,0 +1,24 @@
+.cell {
+  border: 1px solid gray;
+  display: inline-block;
+}
+
+.heading {
+  font-family: 'Trebuchet MS', sans-sarif;
+  color: darkslategrey;
+  text-align: center;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  height: 500px;
+  width: 500px;
+  align-content: center;
+}
+
+.wrapper {
+  width: 75%;
+  align-content: center;
+}

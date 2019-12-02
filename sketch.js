@@ -1,9 +1,16 @@
-const container = document.getElementsByClassName('container');
-const grid = document.createElement('div');
-grid.id = 'grid';
-container.appendChild.(grid);
+const container = document.getElementById('container');
 
-function layout(height, width) {
-  container.style.gridTemplateColumns = `repeat(${width}), 1fr`;
-  container.style.gridTemplateRows = `repeat(${height}), 1fr`;
-}
+
+function makeGrid(rowNum, colNum) {
+  for (i = 0; i < rowNum; i++) {
+        for (j = 0; j < colNum; j++) {
+            let newCell = document.createElement("div");
+            newCell.className = "cell";
+            container.appendChild(newCell);
+          }
+        }
+      }
+
+
+
+makeGrid(16, 16);
