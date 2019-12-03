@@ -1,5 +1,4 @@
 const container = document.getElementById('container');
-/*const cell = document.querySelectorAll('.cell');*/
 
 function makeGrid(rowNum, colNum) {
   for (i = 0; i < rowNum; i++) {
@@ -22,7 +21,16 @@ function hover() {
   });
 }
 
+function clear() {
+  const clear = document.getElementByClassName('clear');
+  const cell = document.querySelectorAll(".cell");
 
+  clear.addEventListener('click', function (e){
+    cell.forEach(item => {
+      e.target.style.backgroundColor = 'white';
+    });
+  });
+}
 
 
 
