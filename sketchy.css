@@ -13,12 +13,16 @@
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  height: 500px;
-  width: 500px;
-  align-content: center;
+  height: inherit;
+  width: inherit;
+  border: 2px solid darkgoldenrod;
 }
 
 .wrapper {
   width: 75%;
-  align-content: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: 500px;
 }
