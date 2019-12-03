@@ -1,5 +1,5 @@
 const container = document.getElementById('container');
-
+/*const cell = document.querySelectorAll('.cell');*/
 
 function makeGrid(rowNum, colNum) {
   for (i = 0; i < rowNum; i++) {
@@ -9,7 +9,20 @@ function makeGrid(rowNum, colNum) {
             container.appendChild(newCell);
           }
         }
-      }
+        hover();
+}
+
+
+function hover() {
+  const cell = document.querySelectorAll(".cell");
+  cell.forEach((item) => {
+    item.addEventListener('mouseenter', (e) => {
+      e.target.style.backgroundColor = '#000000';
+    });
+  });
+}
+
+
 
 
 
