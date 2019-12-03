@@ -2,6 +2,10 @@ html{
   background-color: lightslategray;
 }
 
+.top {
+  text-align: center;
+}
+
 .cell {
   border: 1px solid gray;
   display: inline-block;
@@ -20,7 +24,7 @@ html{
   grid-template-rows: repeat(16, 1fr);
   height: inherit;
   width: inherit;
-  border: 2px solid goldenrod;
+  border: 4px solid goldenrod;
 }
 
 .wrapper {
@@ -30,4 +34,13 @@ html{
   margin-right: auto;
   height: 500px;
   width: 500px;
+}
+
+.clear {
+  display: inline-block;
+  border: 2px solid goldenrod;
+  border-radius: 20%;
+  background-color: lightgrey;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: darkslategray;
 }
