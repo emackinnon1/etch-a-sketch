@@ -1,11 +1,16 @@
+html{
+  background-color: lightslategray;
+}
+
 .cell {
   border: 1px solid gray;
   display: inline-block;
+  background-color: white;
 }
 
 .heading {
   font-family: 'Trebuchet MS', sans-sarif;
-  color: darkslategrey;
+  color: darkslategray;
   text-align: center;
 }
 
@@ -15,7 +20,7 @@
   grid-template-rows: repeat(16, 1fr);
   height: inherit;
   width: inherit;
-  border: 2px solid darkgoldenrod;
+  border: 2px solid goldenrod;
 }
 
 .wrapper {
