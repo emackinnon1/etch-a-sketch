@@ -34,3 +34,9 @@ clear.addEventListener("click", function (e) {
       cell.style.background = '#ffffff';
     });
 });
+
+const newGrid = document.getElementById('newGrid');
+newGrid.addEventListener("click", function (e) {
+  
+
+});
