@@ -5,12 +5,13 @@ window.onload = makeGrid(16, 16);
 
 function makeGrid(rowNum, colNum) {
   const container = document.getElementById('container');
-  for (i = 0; i < rowNum; i++) {
-        for (j = 0; j < colNum; j++) {
+  let cols = container.style.gridTemplateColumns = `repeat(${colNum}, 1fr)`;
+  let rows = container.style.gridTemplateRows = `repeat(${rowNum}, 1fr)`;
+  for (i = 0; i < rowNum * colNum; i++) {
             let newCell = document.createElement("div");
             newCell.className = "cell";
             container.appendChild(newCell);
-          }
+
         }
         hover();
 
@@ -33,10 +34,11 @@ clear.addEventListener("click", function (e) {
     cell.forEach((cell) => {
       cell.style.background = '#ffffff';
     });
+
 });
 
 const newGrid = document.getElementById('newGrid');
 newGrid.addEventListener("click", function (e) {
-  
-
+    let input = window.prompt("How many squares?");
+    makeGrid(input, input);
 });
