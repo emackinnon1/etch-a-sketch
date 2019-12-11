@@ -30,6 +30,11 @@ function clear() {
 }
 
 function makeNewGrid() {
+  let first = container.firstChild;
+  while (first) {
+    first.remove();
+    first = container.firstChild;
+  }
   let input = window.prompt("How many squares?");
   makeGrid(input);
   clear();
