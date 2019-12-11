@@ -35,9 +35,16 @@ function makeNewGrid() {
     first.remove();
     first = container.firstChild;
   }
-  let input = window.prompt("How many squares?");
-  makeGrid(input);
-  clear();
+  let input = window.prompt("How many squares along each side?");
+    if (isNaN(input)) {
+      prompt("That is not a number. How many squares along each side?")
+    }
+    if (isNaN(input)) {
+      alert("That is also not a number. Setting the grid to 16 a side.")
+      input = 16;
+    }
+    makeGrid(input);
+    clear();
 }
 
 document.getElementById('clear').addEventListener("click", clear);
