@@ -22,6 +22,21 @@ function hover() {
   });
 }
 
+function randomColor() {
+
+}
+
+function grey() {
+  const cell = document.querySelectorAll(".cell");
+  cell.forEach((cell) => {
+    cell.style.backgroundColor = '#000000';
+    cell.style.opacity = '0.0';
+    cell.addEventListener('mouseenter', (e) =>{
+      e.target.style.opacity = parseFloat(e.target.style.opacity) + 0.2;
+    });
+  });
+}
+
 function clear() {
   const cell = document.querySelectorAll(".cell");
   cell.forEach((cell) => {
