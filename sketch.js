@@ -10,13 +10,14 @@ function makeGrid(num) {
       newCell.className = "cell";
       container.appendChild(newCell);
     }
-        hover();
 }
 
 function hover() {
   const cell = document.querySelectorAll(".cell");
-  cell.forEach((item) => {
-    item.addEventListener('mouseenter', (e) => {
+  cell.forEach((cell) => {
+    cell.style.backgroundColor = '#000000';
+    cell.style.opacity = '0.0';
+    cell.addEventListener('mouseenter', (e) =>{
       e.target.style.opacity = '1';
     });
   });
@@ -29,9 +30,10 @@ function randomColor() {
 function grey() {
   const cell = document.querySelectorAll(".cell");
   cell.forEach((cell) => {
+    cell.style.backgroundColor = '#000000';
     cell.style.opacity = '0.0';
     cell.addEventListener('mouseenter', (e) =>{
-      e.target.style.opacity = parseFloat(e.target.style.opacity) + 0.1;
+      e.target.style.opacity = parseFloat(e.target.style.opacity) + 0.2;
     });
   });
 }
@@ -39,10 +41,9 @@ function grey() {
 function clear() {
   const cell = document.querySelectorAll(".cell");
   cell.forEach((cell) => {
-/*    cell.style.background ='#ffffff';*/
     cell.style.opacity = '0.0';
   });
-  hover();
+
 }
 
 function makeNewGrid() {
@@ -66,3 +67,4 @@ function makeNewGrid() {
 document.getElementById('clear').addEventListener("click", clear);
 document.getElementById('newGrid').addEventListener("click", makeNewGrid);
 document.getElementById('grey').addEventListener("click", grey);
+document.getElementById('black').addEventListener("click", hover);
