@@ -23,15 +23,24 @@ function hover() {
   });
 }
 
-function randomColor() {
+function generateColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
 
+function randomColor() {
+  const cell = document.querySelectorAll(".cell");
+  cell.forEach((cell) => {
+    cell.addEventListener('mouseenter', (e) => {
+      e.target.style.backgroundColor = generateColor();
+    })
+  })
 }
 
 function grey() {
   const cell = document.querySelectorAll(".cell");
   cell.forEach((cell) => {
-    cell.style.backgroundColor = '#000000';
     cell.style.opacity = '0.0';
+    cell.style.backgroundColor = 'black';
     cell.addEventListener('mouseenter', (e) =>{
       e.target.style.opacity = parseFloat(e.target.style.opacity) + 0.2;
     });
@@ -39,11 +48,12 @@ function grey() {
 }
 
 function clear() {
-  const cell = document.querySelectorAll(".cell");
-  cell.forEach((cell) => {
-    cell.style.opacity = '0.0';
-  });
-
+  let first = container.firstChild;
+  while (first) {
+    first.remove();
+    first = container.firstChild;
+  }
+  makeGrid(16);
 }
 
 function makeNewGrid() {
@@ -68,3 +78,4 @@ document.getElementById('clear').addEventListener("click", clear);
 document.getElementById('newGrid').addEventListener("click", makeNewGrid);
 document.getElementById('grey').addEventListener("click", grey);
 document.getElementById('black').addEventListener("click", hover);
+document.getElementById('random').addEventListener("click", randomColor);
