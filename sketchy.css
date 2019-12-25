@@ -67,3 +67,12 @@ html{
   font-family: 'Trebuchet MS', sans-serif;
   color: darkslategray;
 }
+
+#random {
+  display: inline-block;
+  border: 2px solid goldenrod;
+  border-radius: 20%;
+  background-color: lightgrey;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: darkslategray;
+}
